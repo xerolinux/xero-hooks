@@ -13,12 +13,12 @@ url=https://github.com/xerolinux/$pkgname
 _url="https://raw.githubusercontent.com/xerolinux/$pkgname/main"
 
 source=(
-  $_url/mkinitcpio-gpu
+  $_url/mkinitcpio-gpu.hook
 )
 
 package() {
   cd $srcdir
 
   install -d $pkgdir/usr/share/libalpm/hooks
-  install -Dm644 mkinitcpio-gpu $pkgdir/usr/share/libalpm/hooks/mkinitcpio-gpu
+  install -Dm644 mkinitcpio-gpu.hook $pkgdir/usr/share/libalpm/hooks/mkinitcpio-gpu.hook
 }
