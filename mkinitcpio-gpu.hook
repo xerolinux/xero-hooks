@@ -3,6 +3,7 @@ Operation = Install
 Operation = Upgrade
 Operation = Remove
 Type = Package
+Target = amdgpu
 Target = nvidia-dkms
 Target = nvidia-open-dkms
 Target = nvidia-470xx-dkms-tkg

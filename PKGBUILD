@@ -2,7 +2,7 @@
 
 pkgname=xero-hooks
 pkgdesc="Fixes, additions and enhancements to grub and os-prober."
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 arch=('any')
 license=('GPL')
@@ -13,12 +13,12 @@ url=https://github.com/xerolinux/$pkgname
 _url="https://raw.githubusercontent.com/xerolinux/$pkgname/main"
 
 source=(
-  $_url/mkinitcpio-nvidia.hook
+  $_url/mkinitcpio-gpu
 )
 
 package() {
   cd $srcdir
 
   install -d $pkgdir/usr/share/libalpm/hooks
-  install -Dm644 mkinitcpio-nvidia.hook $pkgdir/usr/share/libalpm/hooks/mkinitcpio-nvidia.hook
+  install -Dm644 mkinitcpio-gpu $pkgdir/usr/share/libalpm/hooks/mkinitcpio-gpu
 }
